@@ -11,6 +11,8 @@
 @interface Player : NSObject
 
 @property (nonatomic, assign) NSInteger currentSquare;
+@property NSDictionary* gameLogic;
+@property BOOL gameOver;
 
 -(void)roll;
 

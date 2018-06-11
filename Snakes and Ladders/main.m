@@ -20,7 +20,7 @@ int main(int argc, const char * argv[]) {
         Player *player1 = [Player new];
         
        
-        while (YES) {
+        while ([player1 gameOver] == NO) {
             fgets(roll, 255, stdin);
             NSString *rollString = [NSString stringWithCString:roll encoding:NSUTF8StringEncoding];
             NSString *rollTrim = [rollString stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]];
@@ -28,6 +28,7 @@ int main(int argc, const char * argv[]) {
             [player1 roll];
             }
         }
+        NSLog(@"GAMEOVER!");
     }
     return 0;
 }
